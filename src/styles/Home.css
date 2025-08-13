@@ -1,0 +1,857 @@
+.banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Cards responsivos */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  height: 60px;
+  width: auto;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+}
+
+.card h3 {
+  color: #00963f;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Seção Sobre Nós */
+.about-us {
+  background: #f8f9fa;
+  padding: 4rem 2rem;
+  margin-top: 3rem;
+}
+
+.about-us .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-us h2 {
+  color: #00963f;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.about-us p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Seção Gases que vendemos */
+.gases-section {
+  background: #00963f;
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.gases-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gases-section h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.gases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.gas-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.gas-icon {
+  color: #ffd700;
+  font-size: 1.5rem;
+  min-width: 30px;
+  margin-top: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.gas-content h3 {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.gas-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Seção Qualidade */
+.quality-section {
+  background: #f8f9fa;
+  padding: 4rem 2rem;
+}
+
+.quality-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quality-section h2 {
+  color: #00963f;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.quality-section p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Seção Fale Conosco - Melhorada */
+.contact-section {
+  background: linear-gradient(135deg, #00963f 0%, #00b851 100%);
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Imagem com overlay */
+.contact-image {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.contact-image:hover {
+  transform: translateY(-5px);
+}
+
+.contact-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0, 150, 63, 0.9) 0%, rgba(0, 184, 81, 0.7) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact-image:hover .image-overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-align: center;
+  color: white;
+}
+
+.overlay-content i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.overlay-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Formulário melhorado */
+.contact-form-area {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-area:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.form-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.header-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #00963f, #00b851);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 15px rgba(0, 150, 63, 0.3);
+}
+
+.header-icon i {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.form-subtitle {
+  color: #00963f;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.contact-form-area h2 {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #00963f;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(0, 150, 63, 0.1);
+  transform: translateY(-1px);
+}
+
+.form-input.success,
+.form-textarea.success {
+  border-color: #28a745;
+  background: #f8fff9;
+}
+
+.form-input.error,
+.form-textarea.error {
+  border-color: #dc3545;
+  background: #fff8f8;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Botão melhorado */
+.form-button {
+  background: linear-gradient(135deg, #0066cc, #0052a3);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 200px;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+}
+
+.form-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0052a3, #003d7a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+}
+
+.form-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-button.loading {
+  background: #6c757d;
+}
+
+/* Mensagens de erro e sucesso */
+.error-message,
+.success-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.error-message {
+  color: #dc3545;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+}
+
+.success-message {
+  color: #28a745;
+  background: #f0fff4;
+  border: 1px solid #c6f6d5;
+}
+
+.form-group .error-message {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  padding: 0.5rem 0;
+  background: none;
+  border: none;
+}
+
+/* Informações de contato melhoradas */
+.contact-info {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-header i {
+  font-size: 1.5rem;
+  color: #ffd700;
+}
+
+.section-header h3 {
+  color: #ffd700;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.location-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.location-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(5px);
+}
+
+.location-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.location-header i {
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+.location-header h4 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-item i {
+  color: #ffd700;
+  font-size: 1rem;
+  width: 20px;
+  flex-shrink: 0;
+}
+
+/* Social media melhorada */
+.social-section h4 {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.social-media {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.social-link.facebook {
+  background: linear-gradient(135deg, #1877f2, #42a5f5);
+}
+
+.social-link.instagram {
+  background: linear-gradient(135deg, #e4405f, #fd1d1d, #fccc63);
+}
+
+.social-link.linkedin {
+  background: linear-gradient(135deg, #0077b5, #00a0dc);
+}
+
+.social-link:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* === RESPONSIVIDADE COMPLETA === */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .cards {
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  
+  .contact-content {
+    gap: 2rem;
+  }
+  
+  .gases-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile Large (481px - 768px) */
+@media (max-width: 768px) {
+  /* Banner */
+  .banner img {
+    height: 200px;
+    min-height: 200px;
+  }
+  
+  /* Cards em coluna */
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .card {
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  /* Seções gerais */
+  .about-us,
+  .quality-section {
+    padding: 3rem 1rem;
+  }
+  
+  .about-us h2,
+  .quality-section h2 {
+    font-size: 2rem;
+  }
+  
+  .about-us p,
+  .quality-section p {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  /* Gases section */
+  .gases-section {
+    padding: 3rem 1rem;
+  }
+
+  .gases-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .gases-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .gas-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .gas-content p {
+    font-size: 0.9rem;
+  }
+
+  /* Contact section */
+  .contact-section {
+    padding: 3rem 1rem;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-form-area {
+    padding: 2rem;
+  }
+
+  .contact-form-area h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .form-button {
+    min-width: 100%;
+  }
+
+  .contact-image img {
+    height: 250px;
+  }
+  
+  .location-card:hover {
+    transform: none; /* Remove hover transform em mobile */
+  }
+}
+
+/* Mobile Small (320px - 480px) */
+@media (max-width: 480px) {
+  /* Banner */
+  .banner img {
+    height: 180px;
+    min-height: 180px;
+  }
+  
+  /* Cards */
+  .cards {
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .card p {
+    font-size: 0.9rem;
+  }
+  
+  /* Seções gerais */
+  .about-us,
+  .quality-section,
+  .gases-section,
+  .contact-section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .about-us h2,
+  .quality-section h2,
+  .gases-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about-us p,
+  .quality-section p {
+    font-size: 0.95rem;
+  }
+  
+  /* Gas items */
+  .gas-item {
+    gap: 0.75rem;
+  }
+  
+  .gas-icon {
+    font-size: 1.3rem;
+    min-width: 25px;
+  }
+  
+  .gas-content h3 {
+    font-size: 1rem;
+  }
+  
+  .gas-content p {
+    font-size: 0.85rem;
+  }
+  
+  /* Contact form */
+  .contact-form-area {
+    padding: 1.5rem;
+  }
+  
+  .contact-form-area h2 {
+    font-size: 1.5rem;
+  }
+  
+  .form-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .header-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .header-icon i {
+    font-size: 1.3rem;
+  }
+  
+  .form-input,
+  .form-textarea {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .form-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  /* Contact info */
+  .location-card {
+    padding: 1rem;
+  }
+  
+  .location-header h4 {
+    font-size: 1rem;
+  }
+  
+  .contact-item {
+    font-size: 0.9rem;
+    gap: 0.5rem;
+  }
+  
+  .section-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .social-media {
+    gap: 0.75rem;
+  }
+  
+  .social-link {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+  
+  .contact-image img {
+    height: 200px;
+  }
+  
+  .overlay-content i {
+    font-size: 2.5rem;
+  }
+  
+  .overlay-content h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra Small Mobile (até 320px) */
+@media (max-width: 320px) {
+  .card {
+    padding: 0.8rem;
+  }
+  
+  .about-us,
+  .quality-section,
+  .gases-section,
+  .contact-section {
+    padding: 1.5rem 0.3rem;
+  }
+  
+  .contact-form-area {
+    padding: 1rem;
+  }
+  
+  .form-input,
+  .form-textarea {
+    padding: 0.7rem;
+  }
+  
+  .location-card {
+    padding: 0.8rem;
+  }
+}
+
+/* Touch improvements para mobile */
+@media (pointer: coarse) {
+  .card,
+  .form-button,
+  .social-link,
+  .location-card {
+    min-height: 44px;
+  }
+  
+  .form-input,
+  .form-textarea {
+    min-height: 44px;
+    font-size: 16px; /* Previne zoom no iOS */
+  }
+  
+  /* Remove hover effects em touch devices */
+  .card:hover,
+  .contact-form-area:hover,
+  .contact-image:hover,
+  .location-card:hover {
+    transform: none;
+  }
+  
+  .social-link:hover {
+    transform: none;
+  }
+}
+
+/* Landscape mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .banner img {
+    height: 150px;
+    min-height: 150px;
+  }
+  
+  .about-us,
+  .quality-section,
+  .gases-section,
+  .contact-section {
+    padding: 2rem 1rem;
+  }
+  
+  .contact-image img {
+    height: 200px;
+  }
+}
