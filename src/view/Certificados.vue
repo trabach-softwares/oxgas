@@ -66,7 +66,7 @@ export default {
         await new Promise(resolve => setTimeout(resolve, 800));
         
         // Caminho correto baseado na estrutura da sua pasta
-        const pdfPath = '/documentos/FDS_AR_SINTETICO_MEDICINAL_REV01.pdf';
+        const pdfPath = '/public/documentos/FDS_AR_SINTETICO_MEDICINAL_REV01.pdf';
         
         // Verificar se o arquivo existe antes de tentar baixar
         const response = await fetch(pdfPath, { method: 'HEAD' });
