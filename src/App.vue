@@ -30,6 +30,7 @@ import Home from "../src/view/Home.vue";
 import Empresa from "../src/view/Empresa.vue";
 import Estrutura from "../src/view/Estrutura.vue";
 import Produtos from "../src/view/Produtos.vue";
+import Certificados from "../src/view/Certificados.vue";
 import Contato from "../src/view/Contato.vue";
 import Footer from "../src/components/Footer.vue";
 
@@ -42,6 +43,7 @@ export default {
     Empresa,
     Estrutura,
     Produtos,
+    Certificados,
     Contato,
     Footer
   },

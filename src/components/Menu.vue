@@ -11,6 +11,7 @@
         <li><a href="#" @click.prevent="navigate('Empresa')" :class="{ active: activeView === 'Empresa' }">Empresa</a></li>
         <li><a href="#" @click.prevent="navigate('Estrutura')" :class="{ active: activeView === 'Estrutura' }">Estrutura</a></li>
         <li><a href="#" @click.prevent="navigate('Produtos')" :class="{ active: activeView === 'Produtos' }">Produtos</a></li>
+        <li><a href="#" @click.prevent="navigate('Certificados')" :class="{ active: activeView === 'Certificados' }">Certificados</a></li>
         <li><a href="#" @click.prevent="navigate('Contato')" :class="{ active: activeView === 'Contato' }">Contato</a></li>
       </ul>
     </nav>
@@ -42,7 +43,6 @@
             <h3>Menu de Navegação</h3>
             <p>OXGAS - Gases Industriais</p>
           </div>
-          <!-- BOTÃO X REMOVIDO AQUI -->
         </div>
       </div>
       
@@ -88,6 +88,17 @@
           >
             <i class="fas fa-box"></i>
             <span>Produtos</span>
+            <i class="fas fa-chevron-right arrow-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a 
+            href="#" 
+            @click.prevent="navigateAndClose('Certificados')" 
+            :class="{ active: activeView === 'Certificados' }"
+          >
+            <i class="fas fa-certificate"></i>
+            <span>Certificados</span>
             <i class="fas fa-chevron-right arrow-icon"></i>
           </a>
         </li>
